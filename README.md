@@ -1,4 +1,6 @@
-<h1 align="center">Triangle Splatting for Real-Time Radiance Field Rendering</h1>
+<h1 align="center">Modified Triangle Splatting for Real-Time Radiance Field Rendering in Unreal Engine</h1>
+
+<h1 align="center">Original Paper:</h1>
 
 <div align="center">
   <a href="https://trianglesplatting.github.io/">Project page</a> &nbsp;|&nbsp;
@@ -21,13 +23,16 @@ This repo contains the official implementation for the paper "Triangle Splatting
 
 Our work represents a significant advancement in radiance field rendering by introducing 3D triangles as rendering primitive. By leveraging the same primitive used in classical mesh representations, our method bridges the gap between neural rendering and traditional graphics pipelines. Triangle Splatting offers a compelling alternative to volumetric and implicit methods, achieving high visual fidelity with faster rendering performance. These results establish Triangle Splatting as a promising step toward mesh-aware neural rendering, unifying decades of GPU-accelerated graphics with modern differentiable frameworks.
 
-## Edits of this fork
+## Goals of this fork
 This project took a while for me to get set up and running locally, and I'd like to make it easier to access for more people as well as further integrate into unreal as much as possible.  It is an extension of my video here:  https://www.youtube.com/video/vmpl0yR18jM
 The loose goals of this branch as of forking are as follows:
 1. Get the binaries building on the 5090 on ubuntu.  I was unable to get this working after a few hours of troubleshooting as ubuntu support for this GPU appears to be limited and incompatible with the combination of torch and cuda versions used by the original project, and I was unable to recompile torch for it.  I am also a linux noob tho which may just result in trying:
 2. Get triangle splatting working on windows.  I mostly use windows so I'd probably be better off getting this working aside from the fact that I now have some runpods configured which seem like an easy way to scale as needed.
 3. Create a custom file type that converts the .pt files into multi-frame mapped binaries unreal can load via a plugin I'm developing along side this project.  The goals for that are to support all rendering features via Unreal's experimental but built in order independent transparancy rendering mode.  This is unlikely to run in real time even with low splat counts, but we'll see!  Basic goal is to be able to use unreal as a 4d compositor.
 4. Create blender import scripts for the above.
+
+## Current Progress
+I've made the readme, this does not work yet.
 
 ## Cloning the Repository + Installation
 
